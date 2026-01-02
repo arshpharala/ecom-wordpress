@@ -1,0 +1,37 @@
+# WordPress core (do not version control)
+wp-admin/
+wp-includes/
+*.php
+!wp-config-sample.php
+!index.php
+
+# If you want to keep only wp-content custom parts:
+wp-content/*
+!wp-content/themes/
+!wp-content/plugins/
+!wp-content/mu-plugins/
+
+# Keep only your theme/plugin folders (adjust names)
+wp-content/themes/*
+!wp-content/themes/your-theme/
+
+wp-content/plugins/*
+!wp-content/plugins/your-plugin/
+
+# Uploads / cache / logs
+wp-content/uploads/
+wp-content/cache/
+wp-content/backups/
+wp-content/upgrade/
+wp-content/wflogs/
+wp-content/debug.log
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Env files
+.env
+wp-config.php
