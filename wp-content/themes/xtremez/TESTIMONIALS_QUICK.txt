@@ -1,0 +1,220 @@
+# Testimonials CPT - Quick Reference Card
+
+## 🎯 What You Get
+
+A complete testimonials system with:
+- ✅ No archive/single pages (admin-managed only)
+- ✅ Upload featured image (person's photo)
+- ✅ Upload company logo (via button)
+- ✅ Rich text editor for testimonial quote
+- ✅ Name field for person's name
+- ✅ Position field for job title/company
+
+---
+
+## 🚀 Quick Start
+
+1. **Go to:** WordPress Admin → Testimonials
+2. **Click:** Add New Testimonial
+3. **Fill in:**
+   - Featured Image: Upload person's photo
+   - Company Logo: Click "Upload Logo" button
+   - Testimonial Text: Write the quote
+   - Name: Person's full name
+   - Position: "Job Title at Company Name"
+4. **Publish** and you're done!
+
+---
+
+## 💻 Display in Template
+
+```php
+<?php
+// Get testimonials
+$testimonials = xtremez_get_testimonials(6);
+
+// Display them
+foreach ($testimonials as $testimonial) {
+  $data = xtremez_get_testimonial_data($testimonial->ID);
+  
+  echo $data['image'];    // Featured image URL
+  echo $data['logo'];     // Company logo URL
+  echo $data['text'];     // Testimonial quote
+  echo $data['name'];     // Person's name
+  echo $data['position']; // Job title/company
+}
+?>
+```
+
+---
+
+## 📊 Data Structure
+
+```php
+$data = xtremez_get_testimonial_data($post_id);
+
+// Returns:
+[
+  'id'       => 123,                          // Post ID
+  'title'    => 'Testimonial',                // Post title
+  'image'    => 'https://example.com/img.jpg', // Featured image
+  'logo'     => 'https://example.com/logo.png', // Company logo
+  'text'     => 'Testimonial quote here...',  // Quote text
+  'name'     => 'John Doe',                   // Person's name
+  'position' => 'Marketing Manager at Acme'   // Job/company
+]
+```
+
+---
+
+## 🔧 Helper Functions
+
+### Get Testimonials
+```php
+// Get all (use default menu_order)
+$testimonials = xtremez_get_testimonials();
+
+// Get 6 testimonials
+$testimonials = xtremez_get_testimonials(6);
+
+// Get 5 by date (newest first)
+$testimonials = xtremez_get_testimonials(5, 'date', 'DESC');
+
+// Get 3 by menu order (for custom ordering)
+$testimonials = xtremez_get_testimonials(3, 'menu_order', 'ASC');
+```
+
+### Get Single Testimonial Data
+```php
+$data = xtremez_get_testimonial_data($post_id);
+
+// Now use:
+$data['id']       // Post ID
+$data['image']    // Featured image URL
+$data['logo']     // Company logo URL
+$data['text']     // Testimonial text
+$data['name']     // Person's name
+$data['position'] // Job title/company
+```
+
+---
+
+## 📋 Admin Upload Fields
+
+When adding a testimonial, you'll see:
+
+1. **Featured Image** (top)
+   - Click "Set featured image"
+   - Upload person's photo
+   
+2. **Company Logo** (metabox)
+   - Click "Upload Logo" button
+   - Select from media library
+   - Shows preview
+   - Can remove with "Remove Logo"
+
+3. **Testimonial Details** (metabox)
+   - **Name:** Person's full name
+   - **Position:** Job title and company
+
+4. **Testimonial Text** (metabox)
+   - Rich text editor
+   - Paste or write the quote
+   - Format text if needed
+
+---
+
+## 🎨 Display Examples
+
+### Simple Grid
+```php
+$testimonials = xtremez_get_testimonials(6);
+foreach ($testimonials as $testimonial) {
+  $data = xtremez_get_testimonial_data($testimonial->ID);
+  ?>
+  <div class="testimonial">
+    <img src="<?php echo esc_url($data['logo']); ?>">
+    <p><?php echo wp_kses_post($data['text']); ?></p>
+    <strong><?php echo esc_html($data['name']); ?></strong>
+    <span><?php echo esc_html($data['position']); ?></span>
+  </div>
+  <?php
+}
+```
+
+### Carousel (with Swiper/Slick)
+```php
+$testimonials = xtremez_get_testimonials(10);
+?>
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <?php foreach ($testimonials as $testimonial) {
+      $data = xtremez_get_testimonial_data($testimonial->ID);
+    ?>
+      <div class="swiper-slide">
+        <!-- Your testimonial markup -->
+      </div>
+    <?php } ?>
+  </div>
+</div>
+```
+
+---
+
+## 🔐 Security
+
+- ✅ Nonce verification
+- ✅ Sanitized input
+- ✅ Escaped output
+- ✅ Capability checks
+- ✅ Safe for production
+
+---
+
+## 📝 Escaping Output
+
+Always escape when displaying:
+
+```php
+// For HTML content
+echo wp_kses_post($data['text']);
+
+// For plain text
+echo esc_html($data['name']);
+
+// For URLs (if logo is used as link)
+echo esc_url($data['logo']);
+
+// For HTML attributes
+echo esc_attr($data['position']);
+```
+
+---
+
+## 💡 Pro Tips
+
+1. **Order testimonials** - Drag in admin to set menu_order
+2. **Use featured image** - High-quality headshots work best
+3. **Company logo** - Keep aspect ratio (usually square or wide)
+4. **Position field** - Include both job title AND company name
+5. **Testimonial text** - Keep under 2-3 sentences for web
+
+---
+
+## 📚 More Info
+
+- See **TESTIMONIALS_USAGE.md** for 5 full examples
+- See **TESTIMONIALS_SETUP.md** for detailed setup guide
+- Check **inc/cpt-testimonials.php** for function definitions
+
+---
+
+## ⚡ Everything Ready?
+
+✅ Testimonials CPT registered
+✅ Admin UI with metaboxes
+✅ Helper functions created
+✅ Documentation provided
+✅ Security hardened
+
+**Start adding testimonials now!** 🎉
