@@ -33,17 +33,20 @@ WordPress uses a **hook-based plugin system** with procedural PHP. The codebase 
 ## Project-Specific Conventions
 
 ### Hook Patterns
+
 - **Action Hooks**: Fire events; use `do_action()` to trigger. Common: `wp_footer`, `admin_init`, `init`
 - **Filter Hooks**: Modify data; use `apply_filters()` to enable modification. Common: `the_content`, `post_type_labels`
 - **Remove Hooks**: Use `remove_action()` or `remove_filter()` with matching priority (default 10) and accepted_args
 
 ### File Organization
+
 - **Core Functions**: [wp-includes/functions.php](wp-includes/functions.php) for general utilities
 - **Admin Functions**: [wp-admin/includes/](wp-admin/includes/) for admin-specific logic
 - **Template Files**: [wp-includes/](wp-includes/) contains template functions (post-template.php, category-template.php)
 - **Class-based Components**: Prefixed with `class-wp-` (e.g., [class-wp-query.php](wp-includes/class-wp-query.php))
 
 ### Code Style
+
 - Use `define()` for constants, `global` to access them
 - Wrap user input with sanitization functions (`sanitize_text_field()`, `esc_html()`)
 - Check capabilities before sensitive operations: `if ( current_user_can( 'edit_posts' ) )`
@@ -52,16 +55,19 @@ WordPress uses a **hook-based plugin system** with procedural PHP. The codebase 
 ## Integration Points & Dependencies
 
 ### Database
+
 - Primary DB config in [wp-config.php](wp-config.php) - defines table prefix (default `wp_`)
 - WPDB class (global `$wpdb`) handles all queries
 - Core tables: wp_posts, wp_postmeta, wp_users, wp_usermeta, wp_options, wp_comments
 
 ### External Services
+
 - **Plugins Loaded**: `require_once ABSPATH . 'wp-admin/includes/plugin.php'` in [wp-settings.php](wp-settings.php#L52)
 - **Requests Library**: [wp-includes/class-requests.php](wp-includes/class-requests.php) for HTTP calls
 - **REST API**: [wp-includes/rest-api/](wp-includes/rest-api/) for programmatic access
 
 ### Theme/Child Theme Loading
+
 - [wp-includes/theme.php](wp-includes/theme.php) loads active theme from [wp-content/themes/](wp-content/themes/)
 - Child themes inherit parent via style.css header `Template:`
 

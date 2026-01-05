@@ -1,0 +1,119 @@
+{
+	"services": [
+		{
+			"title": "DIGITAL MARKETING",
+			"short_description": "Drive results with our organic and paid social media strategies. We'll manage your social presence, create engaging content, and run targeted ad campaigns to reach your ideal audience."
+		},
+		{
+			"title": "EVENTS MANAGEMENT",
+			"short_description": "Create unforgettable event experiences with our expert event management services. We handle everything from stage design and fabrication to logistics and execution."
+		},
+		{
+			"title": "WEB DEVELOPMENT",
+			"short_description": "From responsive websites to e-commerce platforms, we build custom web solutions that are both beautiful and functional."
+		},
+		{
+			"title": "GRAPHIC DESIGN",
+			"short_description": "Make a lasting impression with our creative graphic design services. We design logos, marketing materials, and branding that capture the essence of your brand."
+		},
+		{
+			"title": "CORPORATE GIFT ITEMS",
+			"short_description": "Strengthen relationships and build brand loyalty with our wide selection of customized and corporate gifts."
+		}
+	],
+	"testimonials": [
+		{
+			"image": "images/testimonials/Daniel Perera.webp",
+			"logo": "images/verizon.png",
+			"text": "We’ve worked with several agencies before, but this team stood out for their responsiveness and creativity. They really understood our vision and brought it to life across our campaigns. The results spoke for themselves.",
+			"name": "Daniel Perera",
+			"position": "Brand Manager at Lumera Foods"
+		},
+		{
+			"image": "images/testimonials/Meera Al Mazrouei.webp",
+			"logo": "images/ad.png",
+			"text": "I was under a lot of pressure with a tight deadline, but their end-to-end support made all the difference. From design to delivery, everything was handled smoothly and professionally. Highly recommended!",
+			"name": "Meera Al Mahmoud",
+			"position": "Event Coordinator"
+		},
+		{
+			"image": "images/testimonials/Jonathan Reyes.webp",
+			"logo": "images/jp.png",
+			"text": "What impressed me most was their ability to balance creativity with strategy. They didn’t just give us flashy visuals—they gave us a message that connected with our audience and improved our engagement.",
+			"name": "Jonathan Reyes",
+			"position": "Co-Founder of NovaTech UAE"
+		},
+		{
+			"image": "images/testimonials/Ruwangi Fernando.webp",
+			"logo": "images/jp.png",
+			"text": "We needed custom merchandise that reflected our university’s identity, and they nailed it. The quality was excellent, and the students absolutely loved the designs. Great experience overall!",
+			"name": "Ruwangi Fernando",
+			"position": "Head of Student Affairs, Eastview College"
+		},
+		{
+			"image": "images/testimonials/Omar Siddiqi.webp",
+			"logo": "images/jp.png",
+			"text": "From the first meeting, it was clear they knew what they were doing. They handled every detail efficiently and kept us in the loop throughout. The final delivery was spot-on and on schedule.",
+			"name": "Omar Siddiqi",
+			"position": "Operations Manager at Nexa Trading"
+		}
+	],
+	"why-choose-features": [
+		{
+			"icon": "images/end.png",
+			"title": "END-TO-END SOLUTIONS",
+			"short_description": "We offer complete end-to-end solutions that cover every stage of your project—from concept development and strategic planning to execution, delivery, and aftercare. Our in-house team ensures seamless coordination, tailored services, and consistent quality, all through a single point of contact. With streamlined communication and ongoing support, we simplify the process while maximizing results."
+		},
+		{
+			"icon": "images/creative.png",
+			"title": "CREATIVE EXPERTISE",
+			"short_description": "Our creative expertise lies in transforming ideas into impactful visual and strategic solutions that resonate with your audience. With a strong focus on originality, design precision, and brand alignment, we craft engaging content across digital, print, and physical platforms. By staying ahead of trends and blending creativity with purpose, we ensure that every concept delivers both aesthetic appeal and meaningful results."
+		},
+		{
+			"icon": "images/growth.png",
+			"title": "GROWTH-FOCUSED STRATEGY",
+			"short_description": "Our growth-focused strategy is designed to drive measurable results by aligning every action with your business objectives. We combine market insights, performance data, and creative thinking to develop strategies that boost visibility, engagement, and long-term success. With a focus on scalability and ROI, we help your brand grow smarter, faster, and stronger in a competitive landscape."
+		},
+		{
+			"icon": "images/data.png",
+			"title": "DATA-DRIVEN INSIGHTS",
+			"short_description": "Our data-driven insights empower smarter decision-making by turning numbers into actionable strategies. We analyze performance metrics, user behavior, and market trends to uncover what works and what doesn’t. This approach allows us to optimize campaigns, refine content, and drive continuous improvement—ensuring your brand stays ahead with precision and purpose."
+		}
+	],
+	"contact-detail": {
+		"address": "OFFICE NUMBER 10, 5TH FLOOR, AL MASSOUD BUILDING, FATHIMA BINT MUBARAK STREET - AL DANAH - ZONE 1 - ABU DHABI",
+		"phone": "+971 52 262 1345",
+		"whatsapp": "+971522621345",
+		"email": "INQUEST@XTREMEZ.XYZ"
+	},
+	"social-links": [
+			{
+				"platform" : "Facebook",
+				"link" : "https://www.facebook.com/Xtremez.xyz",
+				"icon" : "images/facebook.svg"
+			},
+			{
+				"platform" : "Instagram",
+				"link" : "https://www.instagram.com/xtremez.xyz",
+				"icon" : "images/instagram.svg"
+			},
+			{
+				"platform" : "Twitter",
+				"link" : "https://x.com/Xtremez2018",
+				"icon" : "images/x.svg"
+			},
+			{
+				"platform" : "Linkedin",
+				"link" : "https://www.linkedin.com/in/xtremez-creative-agency-237714372?fbclid=IwY2xjawO5wQBleHRuA2FlbQIxMABicmlkETFXWmhicEhZTWN2NmJ2aFlsc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHkyk6lwHAqcU3GyTUn47dv41gAOjJt2v_yU46G_o4NNMCj4ebPrG6mVA8Mdv_aem_ExABn1o32ixTju9KNqxt4Q",
+				"icon" : "images/linkedin.svg"
+			},
+			{
+				"platform" : "Thread",
+				"link" : "https://www.threads.com/@xtremez.xyz?xmt=AQF0-ESta83g30ec0_HQskW6CFDr9DbDSXrf2MoF0HnrouA",
+				"icon" : "images/thread.svg"
+			}
+	
+	
+
+		]
+}
